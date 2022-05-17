@@ -1,7 +1,7 @@
-# Oscript SSH client 
+# Oscript Deflate component
 
 [![GitHub release](https://img.shields.io/github/release/ArKuznetsov/oscript-deflate.svg?style=flat-square)](https://github.com/ArKuznetsov/oscript-deflate/releases)
-[![GitHub license](https://img.shields.io/github/license/ArKuznetsov/oscript-deflate.svg?style=flat-square)](https://github.com/ArKuznetsov/oscript-deflate/blob/develop/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/ArKuznetsov/oscript-deflate.svg?style=flat-square)](https://github.com/ArKuznetsov/oscript-deflate/blob/master/LICENSE)
 [![GitHub Releases](https://img.shields.io/github/downloads/ArKuznetsov/oscript-deflate/latest/total?style=flat-square)](https://github.com/ArKuznetsov/oscript-deflate/releases)
 [![GitHub All Releases](https://img.shields.io/github/downloads/ArKuznetsov/oscript-deflate/total?style=flat-square)](https://github.com/ArKuznetsov/oscript-deflate/releases)
 
@@ -10,7 +10,7 @@
 [![Coverage](https://open.checkbsl.org/api/project_badges/measure?project=oscript-deflate&metric=coverage)](https://open.checkbsl.org/dashboard/index/oscript-deflate)
 [![Tech debt](https://open.checkbsl.org/api/project_badges/measure?project=oscript-deflate&metric=sqale_index)](https://open.checkbsl.org/dashboard/index/oscript-deflate)
 
-## Архиватор Deflate клиент для oscript
+## Компонента упаковки / распаковки по алгоритму Deflate для oscript
 
 ## Примеры использования
 
