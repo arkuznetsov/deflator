@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net452;netstandard2.1</TargetFrameworks>
+    <Configurations>Debug;Release</Configurations>
+    <Platforms>AnyCPU</Platforms>
+    <ApplicationIcon />
+    <OutputType>Exe</OutputType>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\oscript-component\oscript-component.csproj">
+      <Project>{EA173D06-CCD2-45D5-A263-DC866289517A}</Project>
+      <Name>oscript-component</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

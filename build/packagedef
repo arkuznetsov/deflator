@@ -1,0 +1,11 @@
+Описание
+	.Имя("deflateArchiver")
+	.Версия("0.1.0")
+	.Автор("Artem Kuznetsov")
+	.АдресАвтора("ArKuznetsov@gmail.com")
+	.Описание("Архиватор deflate для oscript")
+	.ВерсияСреды("1.7")
+	.ВключитьФайл("bin")
+	.ВключитьФайл("package-loader.os")
+	.ВключитьФайл("../README.md")
+	.ВключитьФайл("../LICENSE")
