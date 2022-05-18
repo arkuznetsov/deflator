@@ -14,7 +14,7 @@ namespace TestApp
 
 		static readonly string SCRIPT = @"// Отладочный скрипт
 // в котором уже подключена наша компонента
-Клиент = Новый АрхиваторDeflate();
+Упаковщик = Новый УпаковщикDeflate();
 
 Сообщить(""Ок!"");
 "
@@ -26,7 +26,7 @@ namespace TestApp
 			engine.Initialize();
 
 			// Тут можно указать любой класс из компоненты
-			engine.AttachAssembly(System.Reflection.Assembly.GetAssembly(typeof(oscriptcomponent.DeflateArchiver)));
+			engine.AttachAssembly(System.Reflection.Assembly.GetAssembly(typeof(oscriptcomponent.DeflatePacker)));
 
 			// Если проектов компонент несколько, то надо взять по классу из каждой из них
 			// engine.AttachAssembly(System.Reflection.Assembly.GetAssembly(typeof(oscriptcomponent_2.MyClass_2)));

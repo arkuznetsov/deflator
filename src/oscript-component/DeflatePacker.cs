@@ -15,15 +15,18 @@ using ScriptEngine.HostedScript.Library.Binary;
 namespace oscriptcomponent
 {
     /// <summary>
-    /// АрхиваторDeflate
+    /// Предоставляет методы для упаковки / распаковки данных по алгоритму Deflate
     /// </summary>
-    [ContextClass("АрхиваторDeflate", "DeflateArchiver")]
-    public class DeflateArchiver : AutoContext<DeflateArchiver>
+    [ContextClass("УпаковщикDeflate", "DeflatePacker")]
+    public class DeflatePacker : AutoContext<DeflatePacker>
     {
 
         /// <summary>
-        /// Упаковать поток
+        /// Выполняет упаковку входящего потока
         /// </summary>
+        /// <param name="InputStream">Поток. Исходный поток для упаковки.</param>
+        /// <param name="OutputStream">Поток. Результат упаковки.</param>
+        /// <param name="OutputCompressionLevel">Число. Уровень сжатия (0-2).</param>
         [ContextMethod("УпаковатьПоток")]
         public void CompressStream(IValue InputStream, IValue OutputStream, int OutputCompressionLevel = 2)
         {
@@ -70,8 +73,10 @@ namespace oscriptcomponent
         }
 
         /// <summary>
-        /// Распаковать поток
+        /// Выполняет распаковку входящего потока
         /// </summary>
+        /// <param name="InputStream">Поток. Исходный поток для распаковки.</param>
+        /// <param name="OutputStream">Поток. Результат распаковки.</param>
         [ContextMethod("РаспаковатьПоток")]
         public void DecompressStream(IValue InputStream, IValue OutputStream)
         {
@@ -100,8 +105,11 @@ namespace oscriptcomponent
         }
 
         /// <summary>
-        /// Упаковать файл
+        /// Выполняет упаковку указанного файла
         /// </summary>
+        /// <param name="InputFileName">Строка. Путь к файлу для упаковки.</param>
+        /// <param name="OutputFileName">Строка. Путь к файлу - результату упаковки.</param>
+        /// <param name="OutputCompressionLevel">Число. Уровень сжатия (0-2).</param>
         [ContextMethod("УпаковатьФайл")]
         public void CompressFile(IValue InputFileName, IValue OutputFileName, int OutputCompressionLevel = 2)
         {
@@ -134,8 +142,10 @@ namespace oscriptcomponent
         }
 
         /// <summary>
-        /// Распаковать файл
+        /// Выполняет распаковку указанного файла
         /// </summary>
+        /// <param name="InputFileName">Строка. Путь к файлу для распаковки.</param>
+        /// <param name="OutputFileName">Строка. Путь к файлу - результату распаковки.</param>
         [ContextMethod("РаспаковатьФайл")]
         public void DecompressFile(IValue InputFileName, IValue OutputFileName)
         {
@@ -150,13 +160,13 @@ namespace oscriptcomponent
         }
 
         /// <summary>
-        /// Создает АрхиваторDeflate
+        /// Создает УпаковщикDeflate
         /// </summary>
-        /// <returns>АрхиваторDeflate</returns>
+        /// <returns>УпаковщикDeflate</returns>
         [ScriptConstructor]
         public static IRuntimeContextInstance Constructor()
         {
-            return new DeflateArchiver();
+            return new DeflatePacker();
         }
 
     }

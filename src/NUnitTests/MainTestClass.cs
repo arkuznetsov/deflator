@@ -29,7 +29,7 @@ namespace NUnitTests
 		[Test]
 		public void TestAsInternalObjects()
 		{
-			var item1 = new DeflateArchiver();
+			var item1 = new DeflatePacker();
        
 //			Assert.AreEqual(item1.ReadonlyProperty, "MyValue"); 
 		}

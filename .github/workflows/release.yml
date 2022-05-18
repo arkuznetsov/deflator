@@ -9,7 +9,7 @@ on:
         types: [published, edited]
 
 env:
-  PACKAGE_MASK: deflateArchiver-*.ospx
+  PACKAGE_MASK: deflator-*.ospx
 
 jobs:
   build:
