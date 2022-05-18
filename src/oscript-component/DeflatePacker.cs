@@ -22,7 +22,68 @@ namespace oscriptcomponent
     {
 
         /// <summary>
-        /// Выполняет упаковку входящего потока
+        /// Выполняет упаковку двоичных данных по алгоритму Deflate
+        /// </summary>
+        /// <param name="InputData">ДвоичныеДанные. Данные для упаковки.</param>
+        /// <param name="OutputCompressionLevel">Число. Уровень сжатия (0-2).</param>
+        /// <returns>ДвоичныеДанные - Результат упаковки</returns>
+        [ContextMethod("УпаковатьДанные")]
+        public IValue CompressData(IValue InputData, int OutputCompressionLevel = 2)
+        {
+
+            MemoryStreamContext inputStream;
+
+            if (InputData.AsObject() is BinaryDataContext data)
+            {
+                inputStream = MemoryStreamContext.Constructor();
+                data.OpenStreamForRead().CopyTo(inputStream);
+                inputStream.Seek(0, StreamPositionEnum.Begin);
+            }
+            else
+            {
+                throw RuntimeException.InvalidArgumentType("InputData");
+            }
+
+            MemoryStreamContext outputStream = MemoryStreamContext.Constructor();
+
+            CompressStream(inputStream, outputStream);
+
+            return outputStream.CloseAndGetBinaryData();
+            
+        }
+
+        /// <summary>
+        /// Выполняет распаковку данных по алгоритму Deflate
+        /// </summary>
+        /// <param name="InputData">Поток. Исходный поток для распаковки.</param>
+        /// <returns>ДвоичныеДанные - Результат распаковки</returns>
+        [ContextMethod("РаспаковатьДанные")]
+        public IValue DecompressData(IValue InputData)
+        {
+
+            MemoryStreamContext inputStream;
+
+            if (InputData.AsObject() is BinaryDataContext data)
+            {
+                inputStream = MemoryStreamContext.Constructor();
+                data.OpenStreamForRead().CopyTo(inputStream);
+                inputStream.Seek(0, StreamPositionEnum.Begin);
+            }
+            else
+            {
+                throw RuntimeException.InvalidArgumentType("InputData");
+            }
+
+            MemoryStreamContext outputStream = MemoryStreamContext.Constructor();
+
+            DecompressStream(inputStream, outputStream);
+
+            return outputStream.CloseAndGetBinaryData();
+
+        }
+
+        /// <summary>
+        /// Выполняет упаковку входящего потока по алгоритму Deflate
         /// </summary>
         /// <param name="InputStream">Поток. Исходный поток для упаковки.</param>
         /// <param name="OutputStream">Поток. Результат упаковки.</param>
@@ -73,7 +134,7 @@ namespace oscriptcomponent
         }
 
         /// <summary>
-        /// Выполняет распаковку входящего потока
+        /// Выполняет распаковку входящего потока по алгоритму Deflate
         /// </summary>
         /// <param name="InputStream">Поток. Исходный поток для распаковки.</param>
         /// <param name="OutputStream">Поток. Результат распаковки.</param>
@@ -105,7 +166,7 @@ namespace oscriptcomponent
         }
 
         /// <summary>
-        /// Выполняет упаковку указанного файла
+        /// Выполняет упаковку указанного файла по алгоритму Deflate
         /// </summary>
         /// <param name="InputFileName">Строка. Путь к файлу для упаковки.</param>
         /// <param name="OutputFileName">Строка. Путь к файлу - результату упаковки.</param>
@@ -142,7 +203,7 @@ namespace oscriptcomponent
         }
 
         /// <summary>
-        /// Выполняет распаковку указанного файла
+        /// Выполняет распаковку указанного файла по алгоритму Deflate
         /// </summary>
         /// <param name="InputFileName">Строка. Путь к файлу для распаковки.</param>
         /// <param name="OutputFileName">Строка. Путь к файлу - результату распаковки.</param>
