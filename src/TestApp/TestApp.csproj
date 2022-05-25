@@ -9,9 +9,9 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\oscript-component\oscript-component.csproj">
-      <Project>{EA173D06-CCD2-45D5-A263-DC866289517A}</Project>
-      <Name>oscript-component</Name>
+    <ProjectReference Include="..\oscript-deflate\oscript-deflate.csproj">
+      <Project>{6C4E3728-D8A7-4944-BD4A-F0B259F6712B}</Project>
+      <Name>oscript-deflate</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

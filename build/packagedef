@@ -1,6 +1,6 @@
 Описание
 	.Имя("deflator")
-	.Версия("0.2.0")
+	.Версия("0.2.1")
 	.Автор("Artem Kuznetsov")
 	.АдресАвтора("ArKuznetsov@gmail.com")
 	.Описание("Упаковщик deflate для oscript")
