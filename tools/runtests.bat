@@ -17,9 +17,7 @@ IF NOT EXIST "%~dp0nuget.exe" (
 @dotnet tool install --global dotnet-coverage
 @dotnet restore %~dp0../src
 @dotnet build %~dp0../src --configuration Debug
-@docker-compose --file %~dp0openssh/docker-compose.yml --env-file %~dp0openssh/.env up --build -d
 @mkdir "%~dp0../test"
 @dotnet-coverage collect -o %~dp0../test/coverage.xml -f xml "%~dp0../test/NUnit.ConsoleRunner.3.6.1/tools/nunit3-console.exe %~dp0../src/NUnitTests/bin/Debug/net452/NUnitTests.dll --result=%~dp0../test/nunit-result.xml"
 @rd /S /Q "%~dp0../test/NUnit.ConsoleRunner.3.6.1"
-@docker-compose --file %~dp0openssh/docker-compose.yml down
 @exit /b %ERRORLEVEL%
