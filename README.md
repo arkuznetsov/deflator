@@ -1,14 +1,14 @@
 # Oscript Deflate component
 
-[![GitHub release](https://img.shields.io/github/release/ArKuznetsov/oscript-deflate.svg?style=flat-square)](https://github.com/ArKuznetsov/oscript-deflate/releases)
-[![GitHub license](https://img.shields.io/github/license/ArKuznetsov/oscript-deflate.svg?style=flat-square)](https://github.com/ArKuznetsov/oscript-deflate/blob/master/LICENSE)
-[![GitHub Releases](https://img.shields.io/github/downloads/ArKuznetsov/oscript-deflate/latest/total?style=flat-square)](https://github.com/ArKuznetsov/oscript-deflate/releases)
-[![GitHub All Releases](https://img.shields.io/github/downloads/ArKuznetsov/oscript-deflate/total?style=flat-square)](https://github.com/ArKuznetsov/oscript-deflate/releases)
+[![GitHub release](https://img.shields.io/github/release/ArKuznetsov/deflator.svg?style=flat-square)](https://github.com/ArKuznetsov/deflator/releases)
+[![GitHub license](https://img.shields.io/github/license/ArKuznetsov/deflator.svg?style=flat-square)](https://github.com/ArKuznetsov/deflator/blob/master/LICENSE)
+[![GitHub Releases](https://img.shields.io/github/downloads/ArKuznetsov/deflator/latest/total?style=flat-square)](https://github.com/ArKuznetsov/deflator/releases)
+[![GitHub All Releases](https://img.shields.io/github/downloads/ArKuznetsov/deflator/total?style=flat-square)](https://github.com/ArKuznetsov/deflator/releases)
 
-[![Build Status](https://img.shields.io/github/workflow/status/ArKuznetsov/oscript-deflate/%D0%9A%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8C%20%D0%BA%D0%B0%D1%87%D0%B5%D1%81%D1%82%D0%B2%D0%B0)](https://github.com/arkuznetsov/oscript-deflate/actions/)
-[![Quality Gate](https://open.checkbsl.org/api/project_badges/measure?project=oscript-deflate&metric=alert_status)](https://open.checkbsl.org/dashboard/index/oscript-deflate)
-[![Coverage](https://open.checkbsl.org/api/project_badges/measure?project=oscript-deflate&metric=coverage)](https://open.checkbsl.org/dashboard/index/oscript-deflate)
-[![Tech debt](https://open.checkbsl.org/api/project_badges/measure?project=oscript-deflate&metric=sqale_index)](https://open.checkbsl.org/dashboard/index/oscript-deflate)
+[![Build Status](https://img.shields.io/github/workflow/status/ArKuznetsov/deflator/%D0%9A%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8C%20%D0%BA%D0%B0%D1%87%D0%B5%D1%81%D1%82%D0%B2%D0%B0)](https://github.com/arkuznetsov/deflator/actions/)
+[![Quality Gate](https://open.checkbsl.org/api/project_badges/measure?project=deflator&metric=alert_status)](https://open.checkbsl.org/dashboard/index/deflator)
+[![Coverage](https://open.checkbsl.org/api/project_badges/measure?project=deflator&metric=coverage)](https://open.checkbsl.org/dashboard/index/deflator)
+[![Tech debt](https://open.checkbsl.org/api/project_badges/measure?project=deflator&metric=sqale_index)](https://open.checkbsl.org/dashboard/index/deflator)
 
 ## Компонента упаковки / распаковки по алгоритму Deflate для oscript
 
