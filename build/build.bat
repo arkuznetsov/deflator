@@ -3,7 +3,8 @@
 echo %~dp0
 @chcp 65001
 
-@"%~dp0../test/nuget.exe" restore %~dp0../src
+@"C:\windows\system32\WindowsPowerShell\v1.0\powershell.exe" curl -o "%~dp0../tools/nuget.exe" https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
+@"%~dp0../tools/nuget.exe" restore %~dp0../src
 
 @dotnet restore %~dp0../src
 @dotnet msbuild %~dp0../src -property:Configuration=Release
