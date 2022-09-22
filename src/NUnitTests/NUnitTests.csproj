@@ -6,9 +6,9 @@
     <Platforms>AnyCPU</Platforms>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\oscript-deflate\oscript-deflate.csproj">
+    <ProjectReference Include="..\deflator\deflator.csproj">
       <Project>{6C4E3728-D8A7-4944-BD4A-F0B259F6712B}</Project>
-      <Name>oscript-deflate</Name>
+      <Name>deflator</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

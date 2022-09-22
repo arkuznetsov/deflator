@@ -4,8 +4,8 @@
 \.sonarqube/
 src/NUnitTests/bin/
 src/NUnitTests/obj/
-src/oscript-deflate/bin/
-src/oscript-deflate/obj/
+src/deflator/bin/
+src/deflator/obj/
 src/TestApp/bin/
 src/TestApp/obj/
 build/bin/

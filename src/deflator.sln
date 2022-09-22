@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{C9E6B10A-8892-47AD-B5BF-40C0581F559A}") = "oscript-deflate", "oscript-deflate\oscript-deflate.csproj", "{6C4E3728-D8A7-4944-BD4A-F0B259F6712B}"
+Project("{C9E6B10A-8892-47AD-B5BF-40C0581F559A}") = "deflator", "deflator\deflator.csproj", "{6C4E3728-D8A7-4944-BD4A-F0B259F6712B}"
 EndProject
 Project("{C9E6B10A-8892-47AD-B5BF-40C0581F559A}") = "TestApp", "TestApp\TestApp.csproj", "{CD178D0F-A42A-4E50-9627-FD7915806C36}"
 EndProject

@@ -11,15 +11,15 @@ echo %~dp0
 
 @rd /S /Q "%~dp0bin" 
 @mkdir "%~dp0bin"
-@xcopy %~dp0..\src\oscript-deflate\bin\Release\net452\*.dll %~dp0bin\
-@xcopy %~dp0..\src\oscript-deflate\bin\Release\net452\*.xml %~dp0bin\
+@xcopy %~dp0..\src\deflator\bin\Release\net452\*.dll %~dp0bin\
+@xcopy %~dp0..\src\deflator\bin\Release\net452\*.xml %~dp0bin\
 @del /F /Q "%~dp0bin\OneScript*.*" "%~dp0bin\ScriptEngine*.*" "%~dp0bin\DotNetZip*.*" "%~dp0bin\Newtonsoft*.*"
 
 @"C:\windows\system32\WindowsPowerShell\v1.0\powershell.exe" curl -o "%~dp0OneScriptDocumenter.zip" https://github.com/dmpas/OneScriptDocumenter/releases/download/1.0.14/documenter.zip
 @"C:\Program Files\7-Zip\7z.exe" x -o%~dp0OneScriptDocumenter -y %~dp0OneScriptDocumenter.zip
 @del /F /Q "%~dp0OneScriptDocumenter*.*"
 
-@%~dp0OneScriptDocumenter\OneScriptDocumenter.exe json %~dp0bin\syntaxHelp.json %~dp0..\src\oscript-deflate\bin\Release\net452\oscript-deflate.dll
+@%~dp0OneScriptDocumenter\OneScriptDocumenter.exe json %~dp0bin\syntaxHelp.json %~dp0..\src\deflator\bin\Release\net452\deflator.dll
 
 @rd /S /Q "%~dp0OneScriptDocumenter"
 
