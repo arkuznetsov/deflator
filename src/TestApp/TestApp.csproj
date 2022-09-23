@@ -9,9 +9,6 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <None Remove="Resourses\testScripttestScript.os" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Resourses\testScript.os" />
   </ItemGroup>
   <ItemGroup>

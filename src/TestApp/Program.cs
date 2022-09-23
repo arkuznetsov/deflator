@@ -4,8 +4,8 @@
 // В проекте TestApp должны быть подключены NuGet пакеты OneScript и OneScript.Library
 
 using System;
-using System.Reflection;
 using System.IO;
+using System.Reflection;
 using ScriptEngine.HostedScript;
 using ScriptEngine.HostedScript.Library;
 
@@ -22,11 +22,8 @@ namespace TestApp
 			engine.Initialize();
 
 			// Тут можно указать любой класс из компоненты
-			engine.AttachAssembly(System.Reflection.Assembly.GetAssembly(typeof(oscriptcomponent.DeflatePacker)));
-
 			// Если проектов компонент несколько, то надо взять по классу из каждой из них
-			// engine.AttachAssembly(System.Reflection.Assembly.GetAssembly(typeof(oscriptcomponent_2.MyClass_2)));
-			// engine.AttachAssembly(System.Reflection.Assembly.GetAssembly(typeof(oscriptcomponent_3.MyClass_3)));
+			engine.AttachAssembly(System.Reflection.Assembly.GetAssembly(typeof(oscriptcomponent.DeflatePacker)));
 
 			return engine;
 		}
@@ -63,6 +60,7 @@ namespace TestApp
 		{
 			return new string[] { "1", "2", "3" }; // Здесь можно зашить список аргументов командной строки
 		}
+
 		static private string GetStringFromResource(string resourceName)
 		{
 			var asm = Assembly.GetExecutingAssembly();
