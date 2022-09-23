@@ -14,20 +14,16 @@
             <testCase name="{$caseName}" duration="{$caseDuration}">
               <xsl:choose>
                 <xsl:when test="$testResult = 'Failed'">
-                  <xsl:variable name="reason" select="current()/reason/message" />
-                  <failure message="Failed: {$reason}"><xsl:value-of select="current()/output[last()]"/></failure>
+                  <failure message="Failed"><xsl:value-of select="current()/failure/message"/></failure>
                 </xsl:when>
-                <xsl:when test="$testResult = 'Ignored'">
-                  <xsl:variable name="reason" select="current()/reason/message" />
-                  <skipped message="Ignorred: {$reason}"><xsl:value-of select="current()/output[last()]"/></skipped>
+                <xsl:when test="$testResult = 'Skipped'">
+                  <skipped message="Ignorred"><xsl:value-of select="current()/reason/message"/></skipped>
                 </xsl:when>
                 <xsl:when test="$testResult = 'Warning'">
-                  <xsl:variable name="reason" select="current()/reason/message" />
-                  <error message="Warning: {$reason}"><xsl:value-of select="current()/output[last()]"/></error>
+                  <error message="Warning"><xsl:value-of select="current()/reason/message"/></error>
                 </xsl:when>
                 <xsl:when test="$testResult = 'Inconclusive'">
-                  <xsl:variable name="reason" select="current()/reason/message" />
-                  <error message="Inconclusive: {$reason}"><xsl:value-of select="current()/output[last()]"/></error>
+                  <error message="Inconclusive"><xsl:value-of select="current()/reason/message"/></error>
                 </xsl:when>
               </xsl:choose>
             </testCase>

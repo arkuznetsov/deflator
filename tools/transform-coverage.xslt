@@ -3,7 +3,7 @@
   <xsl:param name="solutionFolder" />
   <xsl:param name="projectName" />
 
-  <xsl:output method="xml" indent="yes" />	
+  <xsl:output method="xml" indent="yes" />
   <xsl:template match="/">
     <coverage version="1">
       <xsl:for-each-group select="//module/functions/function" group-by="@type_name">
