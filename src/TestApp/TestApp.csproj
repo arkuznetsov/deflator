@@ -9,6 +9,12 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Resourses\testScripttestScript.os" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resourses\testScript.os" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\deflator\deflator.csproj">
       <Project>{6C4E3728-D8A7-4944-BD4A-F0B259F6712B}</Project>
       <Name>deflator</Name>
