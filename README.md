@@ -1,5 +1,3 @@
-# Oscript Deflate component
-
 [![GitHub release](https://img.shields.io/github/release/ArKuznetsov/deflator.svg?style=flat-square)](https://github.com/ArKuznetsov/deflator/releases)
 [![GitHub license](https://img.shields.io/github/license/ArKuznetsov/deflator.svg?style=flat-square)](https://github.com/ArKuznetsov/deflator/blob/master/LICENSE)
 [![GitHub Releases](https://img.shields.io/github/downloads/ArKuznetsov/deflator/latest/total?style=flat-square)](https://github.com/ArKuznetsov/deflator/releases)
@@ -10,7 +8,11 @@
 [![Coverage](https://open.checkbsl.org/api/project_badges/measure?project=deflator&metric=coverage)](https://open.checkbsl.org/dashboard/index/deflator)
 [![Tech debt](https://open.checkbsl.org/api/project_badges/measure?project=deflator&metric=sqale_index)](https://open.checkbsl.org/dashboard/index/deflator)
 
-## Компонента упаковки / распаковки по алгоритму Deflate для oscript
+<a href="https://checkbsl.org"><img alt="Checked by Silver Bulleters SonarQube BSL plugin" src="https://web-files.do.bit-erp.ru/sonar/b_t.png" align="right" style="width:400px"/></a>
+
+# Oscript Deflate component
+
+Компонента упаковки / распаковки по алгоритму Deflate для oscript
 
 ## Примеры использования
 
